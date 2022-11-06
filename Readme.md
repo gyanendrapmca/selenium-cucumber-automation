@@ -2,7 +2,7 @@
 
 ## To Get Started
 ### Pre-requisites
-- JDK above 8 should be installed in the system: `JDK_HOME : C:\Program Files\Java\jdk1.7.0_51`
+- JDK 11 should be installed in the system: `JDK_HOME : C:\Program Files\Java\jdk-11.0.16.1`
 - Maven should be installed and configure to the system: `PATH: C:\Program Files\apache-maven-3.8.6\bin`
 - Download and install editor like IntelliJ IDEA
 - Add `Cucumber for Java` and `Gherkin` plugin in IntelliJ IDEA to support gherkin language.

@@ -1,18 +1,13 @@
 package stepdefinitions;
 
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
-import cucumber.api.junit.Cucumber;
 import managers.Base;
-import org.junit.Assert;
-import org.junit.runner.RunWith;
+import org.testng.Assert;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
 import pageObjects.hero.LoginPage;
+import testrunners.TestRunner;
 
-@RunWith(Cucumber.class)
-public class LoginStepDefinitions {
+public class LoginStepDefinitions extends TestRunner {
     private WebDriver driver;
     private LoginPage loginPage;
     @Given("^User is on login page$")
@@ -40,5 +35,6 @@ public class LoginStepDefinitions {
     @Then("^User is able to see successful login message$")
     public void userIsAbleToSeeSuccessfulLoginMessage() {
         Assert.assertEquals(loginPage.isSuccessMessage(), true);
+        driver.quit();
     }
 }

@@ -2,24 +2,20 @@ package stepdefinitions;
 
 import java.io.IOException;
 
-import org.junit.runner.RunWith;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
-import cucumber.api.junit.Cucumber;
 import dataProvider.ConfigFileReader;
 import managers.Base;
+import testrunners.TestRunner;
 import pageObjects.shopping.CartPage;
 import pageObjects.shopping.CheckOutPage;
 import pageObjects.shopping.HomePage;
 import pageObjects.shopping.ProductListingPage;
+import io.cucumber.java.en.*;
 
-@RunWith(Cucumber.class)
-public class E2EStepDefinitions {
+public class E2EStepDefinitions extends TestRunner {
 	private WebDriver driver;
 	private HomePage homePage;
 	private ProductListingPage plist;
